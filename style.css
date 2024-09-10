@@ -2,6 +2,36 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('/fonts/Metropolis-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__dropdown-menu-element {
+  list-style: none;
+  padding: 10px 0;
+}
+
 .header__logo {
   width: 350px;
   height: 46.7px;
@@ -16,8 +46,8 @@
   color: rgb(34, 129, 218);
 }
 
-.body {
-  font-family: "Open Sans", sans-serif;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .header__container {
@@ -37,7 +67,7 @@
 }
 
 .header__nav {
-  font-family: "Metropolis", sans-serif;
+  font-family: 'Metropolis', sans-serif;
   font-weight: 600;
   display: flex;
   gap: 8px;
@@ -49,9 +79,9 @@
 
 .header__nav-item {
   font-weight: 600;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
+  display: list-item;
+  list-style-position: inside;
 }
 
 .header__nav-item:last-child {
@@ -85,13 +115,13 @@
 
 .main__title {
   font-size: 56px;
-  font-family: "Metropolis", sans-serif;
+  font-family: 'Metropolis', sans-serif;
   margin-bottom: 0;
 }
 
 .main__section-text {
   font-size: 20px;
-  font-family: "Metropolis", sans-serif;
+  font-family: 'Metropolis', sans-serif;
 }
 
 .main__button {
@@ -216,7 +246,7 @@
 }
 
 .header__ad-bar {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
   height: 40px;
@@ -226,7 +256,7 @@
 }
 
 .header__ad-bar-link {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
   font-weight: 700;
 }
@@ -257,7 +287,6 @@
   height: 20px;
   margin-left: 10px;
   margin-right: 10px;
-
   width: 40px;
 }
 
@@ -306,6 +335,53 @@
   display: block;
 }
 
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdownFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.header__dropdown-menu {
+  background-color: rgb(241, 241, 241);
+  position: absolute;
+  margin-top: 6.4px;
+  padding: 19.2px 40px;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0px 7px 31px -3px rgba(34, 60, 80, 0.21);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.header__nav-item:hover .header__dropdown-menu,
+.header__dropdown-menu:hover {
+  display: block;
+  animation: dropdownFadeIn 0.3s forwards;
+}
+
+.header__nav-item:hover .header__dropdown-menu.out {
+  animation: dropdownFadeOut 0.3s forwards;
+}
+
 @media (max-width: 2140px) {
   .main__card-section {
     padding-left: 240px;
@@ -351,58 +427,53 @@
 
 @media (max-width: 1120px) {
   .header__logo {
-    width: 230px;
+    width: 220px;
   }
 
   .header__nav-item {
-    font-size: 12px;
+    font-size: 12.8px;
   }
 
   .header__nav {
-    margin-right: 20px;
+    margin-right: 30px;
   }
 }
 
-@media (max-width: 1068px) {
+@media (max-width: 1120px) {
   .header__logo {
-    width: 210px;
+    width: 220px;
   }
+
+  .header__nav-item {
+    font-size: 12.8px;
+  }
+
   .header__nav {
-    margin-right: 40px;
-  }
-  .header__logo {
-    margin-left: 10px;
-  }
-  .header__nav {
-    padding: 0 80px 0 0;
+    margin-right: 30px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
+  .header__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
   .header__burger {
     display: block;
   }
 
-  .header__nav {
-    display: none;
-  }
-
   .header__container {
-    display: block;
-  }
-  .header__ad-bar {
-    display: none;
-  }
-  .header__container {
-    display: flex;
-    justify-content: center;
-  }
-  .header__logo {
-    margin-left: 110px;
-  }
-
-  .main__card-outline {
-    display: block;
-    width: auto;
+    padding: 10px;
   }
 }
