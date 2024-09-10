@@ -83,8 +83,6 @@ body {
   list-style-position: inside;
 }
 
-
-
 .header__burger {
   display: none;
   margin-left: auto;
@@ -443,7 +441,6 @@ body {
   .header__logo {
     margin-left: 10px;
   }
-
 }
 
 @media (max-width: 900px) {
@@ -473,7 +470,7 @@ body {
     display: block;
     width: auto;
   }
-  .theme-toggler{
+  .theme-toggler {
     display: none;
   }
 }
