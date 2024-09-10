@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Metropolis:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Spring</title>
 </head>
 
@@ -15,168 +13,249 @@
         <div class="header__ad-bar">
             <div>
                 <a class="header__ad-bar-link" href="https://springone.io/?utm_source=spring-io-banner">SpringOne</a>
-                2024 will be virtual and free
-                to <a class="header__ad-bar-link"
+                2024 will be virtual and free to
+                <a class="header__ad-bar-link"
                     href="https://go-vmware.broadcom.com/springone2024-reg/?utm_source=spring-io-banner">register!</a>
                 <a class="header__ad-bar-link" href="https://springone.io/schedule">View the schedule &gt;</a>
             </div>
         </div>
         <div class="header__container">
-            <img class="header__logo" alt="Spring Framework Logo" src="img/LogoSpring.svg">
-            <div class="header__nav">
-                <span class="header__nav-item">
-                    Why Spring
-                    <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg">
-                    <div class="header__dropdown-menu">
-                        <a class="header__dropdown-menu-link" href="#">Overview</a>
-                        <a class="header__dropdown-menu-link" href="#">Microservices</a>
-                        <a class="header__dropdown-menu-link" href="#">Reactive</a>
-                        <a class="header__dropdown-menu-link" href="#">Event Driven</a>
-                        <a class="header__dropdown-menu-link" href="#">Cloud</a>
-                        <a class="header__dropdown-menu-link" href="#">Web Applications</a>
-                        <a class="header__dropdown-menu-link" href="#">Serverless</a>
-                        <a class="header__dropdown-menu-link" href="#">Batch</a>
-                    </div>
+            <img class="header__logo" alt="Spring Framework Logo" src="img/LogoSpring.svg" />
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        Why Spring
+                        <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg" />
+                        <ul class="header__dropdown-menu">
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Overview</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Microservices</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Reactive</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Event Driven</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Cloud</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Web Applications</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Serverless</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Batch</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        Learn
+                        <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg" />
+                        <ul class="header__dropdown-menu">
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Overview</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Quickstart</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Guides</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        Projects
+                        <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg" />
+                        <ul class="header__dropdown-menu">
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Overview</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Boot</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Framework</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Cloud</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Cloud Data Flow</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Data</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Integration</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-view-all-projects" href="#">View all projects</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        Academy
+                        <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg" />
+                        <ul class="header__dropdown-menu">
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Courses</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Get Certified</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        Solutions
+                        <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg" />
+                        <ul class="header__dropdown-menu">
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Overview</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Tanzu Spring</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Consulting</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Spring Academy For Teams</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Security Advisories</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        Community
+                        <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg" />
+                        <ul class="header__dropdown-menu">
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Overview</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Events</a>
+                            </li>
+                            <li class="header__dropdown-menu-element">
+                                <a class="header__dropdown-menu-link" href="#">Authors</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <label class="theme-toggler">
+                <input class="theme-toggler-input" type="checkbox" id="theme-switch" />
+                <span class="theme-toggler-icon">
+                    <img src="img/light.svg" alt="Light Theme Icon" class="theme-toggler-icon-light" />
+                    <img src="img/dark.svg" alt="Dark Theme Icon" class="theme-toggler-icon-dark" />
                 </span>
-                <span class="header__nav-item">
-                    Learn
-                    <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg">
-                    <div class="header__dropdown-menu">
-                        <a class="header__dropdown-menu-link" href="#">Overview</a>
-                        <a class="header__dropdown-menu-link" href="#">Quickstart</a>
-                        <a class="header__dropdown-menu-link" href="#">Guides</a>
-                        <a class="header__dropdown-menu-link" href="#">Blog</a>
-                    </div>
-                </span>
-                <span class="header__nav-item">
-                    Projects
-                    <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg">
-                    <div class="header__dropdown-menu">
-                        <a class="header__dropdown-menu-link" href="#">Overview</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Boot</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Framework</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Cloud</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Cloud Data Flow</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Data</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Integration</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Batch</a>
-                        <a class="header__dropdown-menu-view-all-projects" href="#">View all projects</a>
-                    </div>
-                </span>
-                <span class="header__nav-item">
-                    Academy
-                    <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg">
-                    <div class="header__dropdown-menu">
-                        <a class="header__dropdown-menu-link" href="#">Courses</a>
-                        <a class="header__dropdown-menu-link" href="#">Get Certified</a>
-                    </div>
-                </span>
-                <span class="header__nav-item">
-                    Solutions
-                    <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg">
-                    <div class="header__dropdown-menu">
-                        <a class="header__dropdown-menu-link" href="#">Overview</a>
-                        <a class="header__dropdown-menu-link" href="#">Tanzu Spring</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Consulting</a>
-                        <a class="header__dropdown-menu-link" href="#">Spring Academy For Teams</a>
-                        <a class="header__dropdown-menu-link" href="#">Security Advisories</a>
-                    </div>
-                </span>
-                <span class="header__nav-item">
-                    Community
-                    <img class="header__icon" alt="Dropdown icon" src="img/DDIcon.svg">
-                    <div class="header__dropdown-menu">
-                        <a class="header__dropdown-menu-link" href="#">Overview</a>
-                        <a class="header__dropdown-menu-link" href="#">Events</a>
-                        <a class="header__dropdown-menu-link" href="#">Authors</a>
-                    </div>
-                </span>
-                <label class="theme-toggler">
-                    <input class="theme-toggler-input" type="checkbox" id="theme-switch">
-                    <span class="theme-toggler-icon">
-                        <img src="img/light.svg" alt="Light Theme Icon" class="theme-toggler-icon-light">
-                        <img src="img/dark.svg" alt="Dark Theme Icon" class="theme-toggler-icon-dark">
-                    </span>
-                    <span class="theme-toggler-text"></span>
-                </label>
-            </div>
+                <span class="theme-toggler-text"></span>
+            </label>
             <div class="header__burger">
-                <hr class="header__burger-line">
-                <hr class="header__burger-line">
-                <hr class="header__burger-line">
+                <hr class="header__burger-line" />
+                <hr class="header__burger-line" />
+                <hr class="header__burger-line" />
             </div>
         </div>
     </header>
+
     <main>
         <section class="main__section">
             <article class="main__hero-article">
                 <h1 class="main__title">Projects</h1>
                 <div class="main__description">
-                    <p> From configuration to security, web apps to big data—whatever the infrastructure needs of your
-                        application may be, there is a Spring Project to help you build it. Start small and use just
-                        what
-                        you need—Spring is modular by design.</p>
+                    <p>
+                        From configuration to security, web apps to big data—whatever the infrastructure needs of your
+                        application
+                        may be, there is a Spring Project to help you build it. Start small and use just what you
+                        need—Spring is
+                        modular by design.
+                    </p>
                 </div>
                 <button class="main__button">RELEASE CALENDAR</button>
             </article>
             <div class="main__card-section">
                 <div class="main__card-outline">
                     <div class="main__card">
-                        <img class="main__card-image" alt="Spring Boot Logo" src="img/spring-boot.svg">
+                        <img class="main__card-image" alt="Spring Boot Logo" src="img/spring-boot.svg" />
                         <div class="main__card-text">
                             <h1>Spring Boot</h1>
-                            <p>Provides core support for dependency injection, transaction management, web apps, data
-                                access, messaging, and more.</p>
+                            <p>
+                                Provides core support for dependency injection, transaction management, web apps, data
+                                access,
+                                messaging, and more.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="main__card-outline">
                     <div class="main__card">
-                        <img class="main__card-image" alt="Spring Framework Logo" src="img/spring-framework.svg">
+                        <img class="main__card-image" alt="Spring Framework Logo" src="img/spring-framework.svg" />
                         <div class="main__card-text">
                             <h1>Spring Framework</h1>
-                            <p>Takes an opinionated view of building Spring applications and gets you up and running as
-                                quickly as possible.</p>
+                            <p>
+                                Takes an opinionated view of building Spring applications and gets you up and running as
+                                quickly as
+                                possible.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="main__card-outline">
                     <div class="main__card">
-                        <img class="main__card-image" alt="Spring Data Logo" src="img/spring-data.svg">
+                        <img class="main__card-image" alt="Spring Data Logo" src="img/spring-data.svg" />
                         <div class="main__card-text">
                             <h1>Spring Data</h1>
-                            <p>Provides a consistent approach to data access – relational, non-relational, map-reduce,
-                                and beyond.</p>
+                            <p>
+                                Provides a consistent approach to data access – relational, non-relational, map-reduce,
+                                and beyond.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="main__card-outline">
                     <div class="main__card">
-                        <img class="main__card-image" alt="Spring Cloud Logo" src="img/spring-cloud.svg">
+                        <img class="main__card-image" alt="Spring Cloud Logo" src="img/spring-cloud.svg" />
                         <div class="main__card-text">
                             <h1>Spring Cloud</h1>
-                            <p>Provides a set of tools for common patterns in distributed systems. Useful for building
-                                and deploying microservices.</p>
+                            <p>
+                                Provides a set of tools for common patterns in distributed systems. Useful for building
+                                and deploying
+                                microservices.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="main__card-outline">
                     <div class="main__card">
-                        <img class="main__card-image" alt="Spring Cloud Data Flow Logo" src="img/spring-data-flow.svg">
+                        <img class="main__card-image" alt="Spring Cloud Data Flow Logo"
+                            src="img/spring-data-flow.svg" />
                         <div class="main__card-text">
                             <h1>Spring Cloud Data Flow</h1>
-                            <p>Provides an orchestration service for composable data microservice applications on modern
-                                runtimes.</p>
+                            <p>
+                                Provides an orchestration service for composable data microservice applications on
+                                modern runtimes.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="main__card-outline">
                     <div class="main__card">
-                        <img class="main__card-image" alt="Spring Security Logo" src="img/spring-security.svg">
+                        <img class="main__card-image" alt="Spring Security Logo" src="img/spring-security.svg" />
                         <div class="main__card-text">
                             <h1>Spring Security</h1>
-                            <p>Protects your application with comprehensive and extensible authentication and
-                                authorization support.</p>
+                            <p>
+                                Protects your application with comprehensive and extensible authentication and
+                                authorization support.
+                            </p>
                         </div>
                     </div>
                 </div>
