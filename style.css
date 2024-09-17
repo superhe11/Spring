@@ -16,6 +16,192 @@
   font-style: normal;
 }
 
+.text-icon-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.header__fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50);
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+  overflow: auto;
+  transition: opacity 0.3s ease;
+}
+
+.header__fullscreen-menu.active {
+  display: none;
+}
+
+.header__burger {
+  cursor: pointer;
+}
+
+.header__burger-line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-width: 0;
+  margin: 6px 0;
+  transition: background-color 0.3s ease;
+}
+
+.header__burger-line.burger-line-white {
+  background-color: white;
+  border-width: 0;
+}
+
+.burger-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.header__burger-line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.burger-icon.active .header__burger-line:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 12px;
+}
+
+.burger-icon.active .header__burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.active .header__burger-line:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 12px;
+}
+
+.rotate-image {
+  transition: transform 0.3s ease;
+}
+
+.rotate-image.rotate {
+  transform: rotate(180deg);
+}
+
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.menu-item {
+  top: 80px;
+  position: relative;
+  color: white;
+  font-size: 48px;
+  padding-top: 10px;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-icon {
+  margin-left: auto;
+}
+
+.menu-item .menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-item .submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  background-color: rgba(50, 50, 50);
+  padding-left: 20px;
+  margin-top: 10px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item.active .submenu {
+  max-height: 500px;
+  display: flex;
+}
+
+.submenu-hidden {
+  display: none;
+}
+
+.submenu {
+  width: 100%;
+}
+
+.submenu-item {
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgb(119, 119, 119);
+}
+
+.submenu-item:hover {
+  color: #6db33f;
+  transition: 0.1s ease;
+}
+
+.main__search-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  background-color: #ebf2f2;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  width: 50%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #61b861;
+}
+
 .header__nav-list {
   display: flex;
 }
@@ -84,6 +270,7 @@ body {
 }
 
 .header__burger {
+  z-index: 100;
   display: none;
   margin-left: auto;
   width: 40px;
@@ -102,6 +289,7 @@ body {
 .main__hero-article {
   margin-left: 135px;
   padding-right: 135px;
+  padding-bottom: 20px;
 }
 
 .main__section {
@@ -145,7 +333,7 @@ body {
   justify-content: center;
   padding-left: 440px;
   padding-right: 440px;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .main__card-section-wrapper {
@@ -294,7 +482,7 @@ body {
   height: 27px;
   width: 27px;
   transition: all 0.5s ease;
-  z-index: 1000;
+  z-index: 99;
 }
 
 .theme-toggler-icon-light {
@@ -317,16 +505,16 @@ body {
   height: 14px;
 }
 
-.theme-toggler-input:checked + .theme-toggler-icon {
+.theme-toggler-active .theme-toggler-icon {
   left: 32px;
   background: #fff;
 }
 
-.theme-toggler-input:checked + .theme-toggler-icon .theme-toggler-icon-light {
+.theme-toggler-active .theme-toggler-icon-light {
   display: none;
 }
 
-.theme-toggler-input:checked + .theme-toggler-icon .theme-toggler-icon-dark {
+.theme-toggler-active .theme-toggler-icon-dark {
   display: block;
 }
 
@@ -444,6 +632,13 @@ body {
 }
 
 @media (max-width: 900px) {
+  .header__fullscreen-menu.active {
+    display: flex;
+  }
+
+  .header__nav-list {
+    display: none;
+  }
   .header__burger {
     display: block;
   }
