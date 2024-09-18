@@ -1,101 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Spring</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="header__ad-bar">
-        <div class="header__ad-bar-wrapper">
-          <a
-            class="header__ad-bar-link"
-            href="https://springone.io/?utm_source=spring-io-banner"
-          >
-            SpringOne
-          </a>
-          2024 will be virtual and free to
-          <a
-            class="header__ad-bar-link"
-            href="https://go-vmware.broadcom.com/springone2024-reg/?utm_source=spring-io-banner"
-          >
-            register!
-          </a>
-          <a class="header__ad-bar-link" href="https://springone.io/schedule">
-            View the schedule &gt;
-          </a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Spring</title>
+</head>
+
+<body>
+  <header>
+    <div class="header__ad-bar">
+      <div class="header__ad-bar-wrapper">
+        <a class="header__ad-bar-link" href="https://springone.io/?utm_source=spring-io-banner">
+          SpringOne
+        </a>
+        2024 will be virtual and free to
+        <a class="header__ad-bar-link"
+          href="https://go-vmware.broadcom.com/springone2024-reg/?utm_source=spring-io-banner">
+          register!
+        </a>
+        <a class="header__ad-bar-link" href="https://springone.io/schedule">
+          View the schedule &gt;
+        </a>
       </div>
-      <div class="header__container">
-        <img
-          class="header__logo"
-          alt="Spring Framework Logo"
-          src="img/LogoSpring.svg"
-        />
-        <div class="header_container-dropdown"></div>
-        <label class="theme-toggler">
-          <input
-            class="theme-toggler-input"
-            type="checkbox"
-            id="theme-switch"
-          />
-          <span class="theme-toggler-icon">
-            <img
-              src="img/Light.svg"
-              alt="Light Theme Icon"
-              class="theme-toggler-icon-light"
-            />
-            <img
-              src="img/Dark.svg"
-              alt="Dark Theme Icon"
-              class="theme-toggler-icon-dark"
-            />
-          </span>
-          <span class="theme-toggler-text"></span>
-        </label>
+    </div>
+    <div class="header__container">
+      <img class="header__logo" alt="Spring Framework Logo" src="img/LogoSpring.svg" />
+      <div class="header_container-dropdown"></div>
+      <label class="theme-toggler">
+        <input class="theme-toggler-input" type="checkbox" id="theme-switch" />
+        <span class="theme-toggler-icon">
+          <img src="img/Light.svg" alt="Light Theme Icon" class="theme-toggler-icon-light" />
+          <img src="img/Dark.svg" alt="Dark Theme Icon" class="theme-toggler-icon-dark" />
+        </span>
+        <span class="theme-toggler-text"></span>
+      </label>
 
-        <div class="header__fullscreen-menu">
-          <nav class="header__burger-menu"></nav>
-        </div>
-        <div class="header__burger burger-icon">
-          <hr class="header__burger-line" />
-          <hr class="header__burger-line" />
-          <hr class="header__burger-line" />
-        </div>
+      <div class="header__fullscreen-menu">
+        <nav class="header__burger-menu"></nav>
       </div>
-    </header>
+      <div class="header__burger burger-icon">
+        <hr class="header__burger-line" />
+        <hr class="header__burger-line" />
+        <hr class="header__burger-line" />
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <section class="main__section">
-        <article class="main__hero-article">
-          <h1 class="main__title">Projects</h1>
-          <div class="main__description">
-            <p>
-              From configuration to security, web apps to big data—whatever the
-              infrastructure needs of your application may be, there is a Spring
-              Project to help you build it. Start small and use just what you
-              need—Spring is modular by design.
-            </p>
-          </div>
-          <button class="main__button">RELEASE CALENDAR</button>
-        </article>
-        <div class="main__search-container">
-          <input
-            type="text"
-            id="search-input"
-            class="search-input"
-            placeholder="Search by title or description..."
-          />
+  <main>
+    <section class="main__section">
+      <article class="main__hero-article">
+        <h1 class="main__title">Projects</h1>
+        <div class="main__description">
+          <p>
+            From configuration to security, web apps to big data—whatever the
+            infrastructure needs of your application may be, there is a Spring
+            Project to help you build it. Start small and use just what you
+            need—Spring is modular by design.
+          </p>
         </div>
-        <div class="main__card-section"></div>
-        <script type="module" src="scripts/cards.js"></script>
-        <script type="module" src="scripts/header.js"></script>
-        <script type="module" src="scripts/burger.js"></script>
-        <script type="module" src="scripts/selector.js"></script>
-      </section>
-    </main>
-  </body>
+        <button class="main__button">RELEASE CALENDAR</button>
+      </article>
+      <div class="main__search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Search by title or description..." />
+      </div>
+      <div class="main__card-section"></div>
+      <!--
+      <script type="module" src="scripts/header.js"></script>
+      <script type="module" src="scripts/burger.js"></script>
+      <script type="module" src="scripts/selector.js"></script>
+      <script type="module" src="scripts/fakeshop.js"></script>-->
+      <script type="module" src="scripts/cards.js"></script>
+      <script type="module" src="scripts/index.js"></script>
+    </section>
+  </main>
+</body>
+
 </html>

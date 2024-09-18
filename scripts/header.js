@@ -1,6 +1,6 @@
-import {NAV_DATA} from './headerarray.js';
+import { NAV_DATA } from './headerarray.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+export function renderNav() {
   const navContainer = document.querySelector('.header_container-dropdown');
 
   function createNavItem(item) {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return li;
   }
 
-  function renderNav() {
+  function renderNavItems() {
     const ul = document.createElement('ul');
     ul.className = 'header__nav-list';
 
@@ -50,5 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
     navContainer.appendChild(ul);
   }
 
-  renderNav();
-});
+  renderNavItems();
+}
